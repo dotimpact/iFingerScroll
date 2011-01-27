@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>iFingerScroll DEMO</title>
+
+    <link type="text/css" rel="stylesheet" href="http://jqtouch.googlecode.com/svn/trunk/jqtouch/jqtouch.css"> 
+    <link type="text/css" rel="stylesheet" href="themes/jqt/theme.css"> 
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://jqtouch.googlecode.com/svn/trunk/jqtouch/jqtouch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/jquery.iFingerScroll-translate.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $.jQTouch();
+        $(document).ready(function() {
+          if( !is_iphone_or_ipad() ) {
+            $('body').css({
+              background: "url(images/landscape.png) 50% 0 no-repeat",
+              padding: "120px 0 0 0"
+            });
+          }
+          $("#sidebar").iFingerScroll();
+          $("#main").iFingerScroll();
+        });
+        
+        function is_iphone_or_ipad() {
+          return RegExp(" AppleWebKit/").test(navigator.userAgent) && RegExp(" Mobile/").test(navigator.userAgent);
+        };
+    </script>
+    <style type="text/css" media="screen">
+    #page {
+      position: relative;
+      margin: 0 auto 0 auto;
+      width: 1024px;
+      height: 690px;
+      overflow: hidden;
+    }
+    #sidebar {
+      width: 320px;
+      height: 768px;
+      overflow: hidden;
+      position:relative;
+      float: left;
+    }
+    
+    #sidebar div{
+      width: 100%;
+    }
+    
+    #main {
+      background: #ccc;
+      width: 704px;
+      height: 690px;
+      overflow: hidden;
+      display: block;
+    }
+    
+    #main div {
+      width: 100%;
+    }
+    
+    #main .main-block {
+      background: #FFF;
+      border: 2px solid #aaa;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      margin: 8px;
+      padding: 16px;
+      width: 652px;
+      height: 300px;
+    }
+    </style>
+</head>
+<body>
+<div id="page">
+
+<div id="sidebar">
+  <ul class="edgetoedge"> 
+      <li class="sep">List A</li> 
+      <li><a href="#">Item A-1</a></li> 
+      <li><a href="#">Item A-2</a></li> 
+      <li><a href="#">Item A-3</a></li> 
+      <li><a href="#">Item A-4</a></li> 
+      <li><a href="#">Item A-5</a></li> 
+      <li><a href="#">Item A-6</a></li> 
+      <li><a href="#">Item A-7</a></li> 
+      <li><a href="#">Item A-8</a></li> 
+      <li class="sep">List B</li> 
+      <li><a href="#">Item B-1</a></li> 
+      <li><a href="#">Item B-2</a></li> 
+      <li><a href="#">Item B-3</a></li> 
+      <li><a href="#">Item B-4</a></li> 
+      <li><a href="#">Item B-5</a></li> 
+      <li><a href="#">Item B-6</a></li> 
+      <li><a href="#">Item B-7</a></li> 
+      <li><a href="#">Item B-8</a></li> 
+      <li class="sep">List C</li> 
+      <li><a href="#">Item C-1</a></li> 
+      <li><a href="#">Item C-2</a></li> 
+      <li><a href="#">Item C-3</a></li> 
+      <li><a href="#">Item C-4</a></li> 
+      <li><a href="#">Item C-5</a></li> 
+      <li><a href="#">Item C-6</a></li> 
+      <li><a href="#">Item C-7</a></li> 
+      <li><a href="#">Item C-8</a></li> 
+  </ul> 
+</div>
+
+<div id="main">
+  <div class="main-block">
+    <p>Block 1</p>
+  </div>
+  <div class="main-block">
+    <p>Block 2</p>
+  </div>
+  <div class="main-block">
+    <p>Block 3</p>
+  </div>
+  <div class="main-block">
+    <p>Block 4</p>
+  </div>
+  <div class="main-block">
+    <p>Block 5</p>
+  </div>
+  <div class="main-block">
+    <p>Block 6</p>
+  </div>
+</div><!-- // #main_area -->
+
+</div><!-- // #page -->
+</body>
+</html>
